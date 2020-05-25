@@ -1,0 +1,28 @@
+//
+// {{ module_info.file_name }}
+// {{ module_info.project_name }}
+//
+// Created by {{ developer.name }} on {{ date }}.
+// Copyright {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import UIKit
+
+// MARK: View Contract
+protocol {{ module_info.name }}ViewProtocol: {{ module_info.name }}Transitioner {
+}
+
+// MARK: Presenter Contract
+protocol {{ module_info.name }}PresenterProtocol: AnyObject {
+}
+
+// MARK: Interactor Contract
+protocol {{ module_info.name }}InteractorProtocol: AnyObject {
+}
+
+// MARK: Router Contract
+protocol {{ module_info.name }}RouterProtocol: AnyObject {
+}
+
+protocol {{ module_info.name }}Transitioner where Self: UIViewController {
+}

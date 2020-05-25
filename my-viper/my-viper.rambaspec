@@ -1,0 +1,21 @@
+# Template information section
+name: my-viper
+summary: My Original Template for VIPER
+author: Shumpei Nagata
+version: 1.0.0
+license: MIT
+
+# The declarations for code files
+code_files:
+- {name: Contract/Contract.swift, path: Code/Contract/contract.swift.liquid}
+- {name: View/ViewController.swift, path: Code/View/viewcontroller.swift.liquid}
+- {name: Interactor/Interactor.swift, path: Code/Interactor/interactor.swift.liquid}
+- {name: Presenter/Presenter.swift, path: Code/Presenter/presenter.swift.liquid}
+- {name: Router/Router.swift, path: Code/Router/router.swift.liquid}
+
+# The declarations for test files
+test_files:
+- {name: View/ViewTests.swift, path: Tests/View/view_tests.swift.liquid}
+- {name: Interactor/InteractorTests.swift, path: Tests/Interactor/interactor_tests.swift.liquid}
+- {name: Presenter/PresenterTests.swift, path: Tests/Presenter/presenter_tests.swift.liquid}
+- {name: Router/RouterTests.swift, path: Tests/Router/router_tests.swift.liquid}
