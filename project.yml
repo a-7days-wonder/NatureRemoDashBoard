@@ -1,0 +1,52 @@
+name: NatureRemoDashBoard
+
+options:
+  bundleIdPrefix: com.ShumpeiNagata
+  deploymentTarget:
+    iOS: 13.0
+
+targets:
+  NatureRemoDashBoard:
+    type: application
+    platform: iOS
+    sources: NatureRemoDashBoard
+    settings:
+      base:
+        INFOPLIST_FILE: NatureRemoDashBoard/Application/Info.plist
+    dependencies:
+    - carthage: Alamofire
+    - carthage: Charts
+
+  NatureRemoDashBoardTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources: NatureRemoDashBoardTests
+    setting:
+      base:
+        INFOPLIST_FILE: NatureRemoDashBoardTests/Info.plist
+    dependencies:
+      - target: NatureRemoDashBoard
+
+  NatureRemoDashBoardUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources: NatureRemoDashBoardUITests
+    setting:
+      base:
+        INFOPLIST_FILE: NatureRemoDashBoardUITests/Info.plist
+    dependencies:
+      - target: NatureRemoDashBoard
+
+scheme:
+  NatureRemoDashBoard:
+    build:
+      targets:
+        NatureRemoDashBoard: all
+        NatureRemoDashBoardTests: [test]
+        NatureRemoDashBoardUITests: [test]
+    test:
+      config: Debug
+      gatherCoverageData: true
+      targets:
+        - name: NatureRemoDashBoardTests
+        - name: NatureRemoDashBoardUITests
